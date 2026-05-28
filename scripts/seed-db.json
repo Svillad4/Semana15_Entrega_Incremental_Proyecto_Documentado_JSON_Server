@@ -1,0 +1,122 @@
+{
+  "visitantes": [
+    {
+      "id": 1,
+      "nombre": "Ana Perez",
+      "correo": "ana@example.com",
+      "telefono": "3001234567",
+      "interes": "Productos agricolas",
+      "comentario": "Desea recibir informacion de la feria.",
+      "fechaRegistro": "2025-06-15T09:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "nombre": "Carlos Gomez",
+      "correo": "carlos@example.com",
+      "telefono": "3119876543",
+      "interes": "Talleres",
+      "comentario": "Interesado en talleres de emprendimiento rural.",
+      "fechaRegistro": "2025-06-15T10:15:00.000Z"
+    }
+  ],
+  "bitacora": [
+    {
+      "id": 1,
+      "fecha": "2025-06-15",
+      "tipo": "Formulario",
+      "esperado": "El formulario no debe guardar campos vacios.",
+      "obtenido": "Se mostraron alertas de validacion.",
+      "error": "Sin error critico.",
+      "correccion": "Se reviso la funcion validarVisitante().",
+      "estado": "corregido",
+      "prioridad": "media",
+      "evidencia": "evidencias/pruebas/formulario-validacion.png"
+    },
+    {
+      "id": 2,
+      "fecha": "2025-06-15",
+      "tipo": "Base de datos",
+      "esperado": "El registro debe guardarse en JSON Server.",
+      "obtenido": "El registro aparece en /visitantes.",
+      "error": "Sin error critico.",
+      "correccion": "Se verifico el endpoint http://localhost:3001/visitantes.",
+      "estado": "corregido",
+      "prioridad": "alta",
+      "evidencia": "evidencias/json-server/api-visitantes.png"
+    }
+  ],
+  "checklist": [
+    {
+      "id": 1,
+      "requisito": "El proyecto ejecuta correctamente con npm run start.",
+      "cumple": false,
+      "evidencia": ""
+    },
+    {
+      "id": 2,
+      "requisito": "La base de datos JSON Server responde en http://localhost:3001.",
+      "cumple": false,
+      "evidencia": ""
+    },
+    {
+      "id": 3,
+      "requisito": "El formulario valida campos obligatorios.",
+      "cumple": false,
+      "evidencia": ""
+    },
+    {
+      "id": 4,
+      "requisito": "Los datos se guardan correctamente en db.json mediante la API.",
+      "cumple": false,
+      "evidencia": ""
+    },
+    {
+      "id": 5,
+      "requisito": "La bitacora registra pruebas, errores y correcciones.",
+      "cumple": false,
+      "evidencia": ""
+    },
+    {
+      "id": 6,
+      "requisito": "El README_ENTREGA.md contiene documentacion tecnica completa.",
+      "cumple": false,
+      "evidencia": ""
+    },
+    {
+      "id": 7,
+      "requisito": "La consola del navegador no muestra errores criticos.",
+      "cumple": false,
+      "evidencia": ""
+    },
+    {
+      "id": 8,
+      "requisito": "El diseno se adapta a vista movil.",
+      "cumple": false,
+      "evidencia": ""
+    },
+    {
+      "id": 9,
+      "requisito": "El guion de exposicion esta preparado.",
+      "cumple": false,
+      "evidencia": ""
+    },
+    {
+      "id": 10,
+      "requisito": "Las evidencias estan organizadas en las carpetas solicitadas.",
+      "cumple": false,
+      "evidencia": ""
+    }
+  ],
+  "exposicion": [
+    {
+      "id": 1,
+      "nombreProyecto": "Feria Rural Digital - Version documentada",
+      "objetivo": "Presentar una version funcional del proyecto, validada y documentada.",
+      "tecnologias": "HTML, CSS, JavaScript, Vite, Bootstrap, JSON Server, SweetAlert2 y Chart.js.",
+      "funcionalidades": "Registro de visitantes, bitacora tecnica, checklist de requisitos y dashboard de seguimiento.",
+      "pruebas": "Pruebas de formulario, base de datos, consola, responsive y checklist.",
+      "correcciones": "Completar segun las correcciones realizadas por el estudiante.",
+      "aprendizaje": "Completar con reflexion personal o del equipo."
+    }
+  ]
+}

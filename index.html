@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Proyecto Semana 15: entrega incremental, documentacion tecnica, validacion, correccion y exposicion." />
+    <title>Semana 15 | Proyecto documentado y validado</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow-sm" aria-label="Navegacion principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#inicio"><i class="bi bi-journal-check me-2" aria-hidden="true"></i>Semana 15</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido" aria-controls="navbarContenido" aria-expanded="false" aria-label="Abrir menu de navegacion">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContenido">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#registro">Registro</a></li>
+            <li class="nav-item"><a class="nav-link" href="#bitacora">Bitacora</a></li>
+            <li class="nav-item"><a class="nav-link" href="#checklist">Checklist</a></li>
+            <li class="nav-item"><a class="nav-link" href="#dashboard">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="#exposicion">Exposicion</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header id="inicio" class="hero-section">
+      <div class="container py-5">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <span class="badge rounded-pill text-bg-warning mb-3">Entrega incremental</span>
+            <h1 class="display-5 fw-bold">Feria Rural Digital: version documentada, validada y lista para exponer</h1>
+            <p class="lead mt-3">En esta actividad vas a mejorar una version funcional del proyecto, registrar pruebas, documentar decisiones tecnicas y preparar una exposicion clara.</p>
+            <div class="d-flex flex-wrap gap-2 mt-4">
+              <a class="btn btn-light btn-lg" href="#bitacora"><i class="bi bi-bug me-2" aria-hidden="true"></i>Registrar prueba</a>
+              <a class="btn btn-outline-light btn-lg" href="#checklist"><i class="bi bi-card-checklist me-2" aria-hidden="true"></i>Ver checklist</a>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="hero-card shadow-lg" role="group" aria-label="Resumen del proyecto">
+              <h2 class="h4">Tu meta tecnica</h2>
+              <p>Demostrar que el proyecto funciona, que fue probado, corregido, documentado y preparado para exposicion.</p>
+              <ul class="list-unstyled small mb-0">
+                <li><i class="bi bi-check-circle-fill text-success me-2" aria-hidden="true"></i>JSON Server como base local</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2" aria-hidden="true"></i>Bitacora de validacion y correccion</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2" aria-hidden="true"></i>Checklist de requisitos</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2" aria-hidden="true"></i>Guion de exposicion tecnica</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido-principal">
+      <section class="section-padding bg-light" aria-labelledby="resumenTitulo">
+        <div class="container">
+          <h2 id="resumenTitulo" class="section-title">Resumen de la actividad</h2>
+          <div class="row g-3 mt-2">
+            <div class="col-md-4">
+              <article class="info-card h-100">
+                <i class="bi bi-file-earmark-text fs-1 text-primary" aria-hidden="true"></i>
+                <h3 class="h5 mt-3">Documenta</h3>
+                <p>Completa el README_ENTREGA.md y explica tecnologias, ejecucion, funcionalidades, pruebas y evidencias.</p>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="info-card h-100">
+                <i class="bi bi-shield-check fs-1 text-primary" aria-hidden="true"></i>
+                <h3 class="h5 mt-3">Valida y corrige</h3>
+                <p>Registra pruebas reales en la bitacora, identifica errores y documenta como los solucionaste.</p>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="info-card h-100">
+                <i class="bi bi-megaphone fs-1 text-primary" aria-hidden="true"></i>
+                <h3 class="h5 mt-3">Prepara tu exposicion</h3>
+                <p>Organiza una explicacion tecnica clara: problema, solucion, tecnologias, pruebas, correcciones y aprendizaje.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="registro" class="section-padding" aria-labelledby="registroTitulo">
+        <div class="container">
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-5">
+              <h2 id="registroTitulo" class="section-title">Registro de visitantes</h2>
+              <p class="text-muted">Usa este modulo para probar formulario, validaciones y guardado en JSON Server.</p>
+              <form id="visitanteForm" class="needs-validation card-form" novalidate>
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre completo</label>
+                  <input id="nombre" name="nombre" class="form-control" type="text" placeholder="Ejemplo: Laura Martinez" required />
+                  <div class="invalid-feedback">Escribe un nombre de al menos 3 caracteres.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="correo" class="form-label">Correo electronico</label>
+                  <input id="correo" name="correo" class="form-control" type="email" placeholder="correo@ejemplo.com" required />
+                  <div class="invalid-feedback">Escribe un correo valido.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="telefono" class="form-label">Telefono</label>
+                  <input id="telefono" name="telefono" class="form-control" type="tel" placeholder="3001234567" required />
+                  <div class="invalid-feedback">El telefono debe tener 10 digitos.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="interes" class="form-label">Interes principal</label>
+                  <select id="interes" name="interes" class="form-select" required>
+                    <option value="">Selecciona una opcion</option>
+                    <option>Productos agricolas</option>
+                    <option>Talleres</option>
+                    <option>Emprendimiento</option>
+                    <option>Comunidad</option>
+                  </select>
+                  <div class="invalid-feedback">Selecciona un interes.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="comentario" class="form-label">Comentario</label>
+                  <textarea id="comentario" name="comentario" class="form-control" rows="3" placeholder="Escribe una observacion breve"></textarea>
+                </div>
+                <button class="btn btn-primary w-100" type="submit"><i class="bi bi-save me-2" aria-hidden="true"></i>Guardar visitante</button>
+              </form>
+            </div>
+            <div class="col-lg-7">
+              <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+                <h3 class="h4 mb-0">Visitantes registrados</h3>
+                <button id="recargarVisitantes" class="btn btn-outline-primary btn-sm" type="button"><i class="bi bi-arrow-clockwise me-1" aria-hidden="true"></i>Recargar</button>
+              </div>
+              <div class="table-responsive data-card">
+                <table class="table table-hover align-middle mb-0">
+                  <caption class="visually-hidden">Tabla de visitantes registrados</caption>
+                  <thead>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>Correo</th>
+                      <th>Telefono</th>
+                      <th>Interes</th>
+                    </tr>
+                  </thead>
+                  <tbody id="visitantesTabla"></tbody>
+                </table>
+              </div>
+              <p class="small text-muted mt-2">Evidencia sugerida: captura de la tabla y del endpoint <code>/visitantes</code> en JSON Server.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="bitacora" class="section-padding bg-light" aria-labelledby="bitacoraTitulo">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-lg-5">
+              <h2 id="bitacoraTitulo" class="section-title">Bitacora de validacion y correccion</h2>
+              <p class="text-muted">Registra las pruebas que realizaste, los errores encontrados y las correcciones aplicadas.</p>
+              <form id="bitacoraForm" class="card-form" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="fechaPrueba" class="form-label">Fecha</label>
+                    <input id="fechaPrueba" name="fecha" class="form-control" type="date" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="tipoPrueba" class="form-label">Tipo de prueba</label>
+                    <select id="tipoPrueba" name="tipo" class="form-select" required>
+                      <option value="">Selecciona</option>
+                      <option>Formulario</option>
+                      <option>Base de datos</option>
+                      <option>Consola</option>
+                      <option>Responsive</option>
+                      <option>Accesibilidad</option>
+                      <option>Documentacion</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label for="esperado" class="form-label">Resultado esperado</label>
+                    <textarea id="esperado" name="esperado" class="form-control" rows="2" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <label for="obtenido" class="form-label">Resultado obtenido</label>
+                    <textarea id="obtenido" name="obtenido" class="form-control" rows="2" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <label for="error" class="form-label">Error encontrado</label>
+                    <textarea id="error" name="error" class="form-control" rows="2" placeholder="Si no hubo error, escribe: Sin error critico" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <label for="correccion" class="form-label">Correccion aplicada</label>
+                    <textarea id="correccion" name="correccion" class="form-control" rows="2" required></textarea>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="estado" class="form-label">Estado</label>
+                    <select id="estado" name="estado" class="form-select" required>
+                      <option value="pendiente">Pendiente</option>
+                      <option value="en proceso">En proceso</option>
+                      <option value="corregido">Corregido</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="prioridad" class="form-label">Prioridad</label>
+                    <select id="prioridad" name="prioridad" class="form-select" required>
+                      <option value="alta">Alta</option>
+                      <option value="media">Media</option>
+                      <option value="baja">Baja</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label for="evidencia" class="form-label">Ruta de evidencia</label>
+                    <input id="evidencia" name="evidencia" class="form-control" type="text" placeholder="evidencias/pruebas/nombre-captura.png" />
+                  </div>
+                </div>
+                <button class="btn btn-success w-100 mt-3" type="submit"><i class="bi bi-plus-circle me-2" aria-hidden="true"></i>Agregar registro a la bitacora</button>
+              </form>
+            </div>
+            <div class="col-lg-7">
+              <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+                <h3 class="h4 mb-0">Registros de bitacora</h3>
+                <select id="filtroEstado" class="form-select form-select-sm w-auto" aria-label="Filtrar bitacora por estado">
+                  <option value="todos">Todos</option>
+                  <option value="pendiente">Pendientes</option>
+                  <option value="en proceso">En proceso</option>
+                  <option value="corregido">Corregidos</option>
+                </select>
+              </div>
+              <div id="bitacoraLista" class="bitacora-lista"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="checklist" class="section-padding" aria-labelledby="checklistTitulo">
+        <div class="container">
+          <h2 id="checklistTitulo" class="section-title">Checklist de requisitos</h2>
+          <p class="text-muted">Marca los requisitos cuando tengas evidencia real. No marques un requisito si no puedes demostrarlo con captura o documento.</p>
+          <div id="checklistLista" class="row g-3"></div>
+        </div>
+      </section>
+
+      <section id="dashboard" class="section-padding bg-light" aria-labelledby="dashboardTitulo">
+        <div class="container">
+          <h2 id="dashboardTitulo" class="section-title">Dashboard de seguimiento</h2>
+          <div class="row g-4 align-items-stretch">
+            <div class="col-lg-4">
+              <div class="metric-card">
+                <span class="metric-label">Visitantes</span>
+                <strong id="contadorVisitantes">0</strong>
+              </div>
+              <div class="metric-card">
+                <span class="metric-label">Pruebas registradas</span>
+                <strong id="contadorPruebas">0</strong>
+              </div>
+              <div class="metric-card">
+                <span class="metric-label">Checklist cumplido</span>
+                <strong id="contadorChecklist">0%</strong>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="chart-card">
+                <h3 class="h5">Estado de las pruebas</h3>
+                <canvas id="graficoEstados" aria-label="Grafico del estado de las pruebas" role="img"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="exposicion" class="section-padding" aria-labelledby="exposicionTitulo">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-lg-5">
+              <h2 id="exposicionTitulo" class="section-title">Preparacion de exposicion</h2>
+              <p class="text-muted">Completa este guion base para organizar lo que vas a explicar. Tambien debes diligenciar <code>docs/guion-exposicion.md</code>.</p>
+              <div class="alert alert-info">
+                <strong>Consejo:</strong> no leas todo el codigo. Explica el problema, la solucion, las pruebas, las correcciones y lo que aprendiste.
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <form id="exposicionForm" class="card-form">
+                <div class="mb-3">
+                  <label for="nombreProyecto" class="form-label">Nombre del proyecto</label>
+                  <input id="nombreProyecto" name="nombreProyecto" class="form-control" type="text" />
+                </div>
+                <div class="mb-3">
+                  <label for="objetivoProyecto" class="form-label">Objetivo</label>
+                  <textarea id="objetivoProyecto" name="objetivo" class="form-control" rows="2"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="tecnologiasProyecto" class="form-label">Tecnologias utilizadas</label>
+                  <textarea id="tecnologiasProyecto" name="tecnologias" class="form-control" rows="2"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="funcionalidadesProyecto" class="form-label">Funcionalidades</label>
+                  <textarea id="funcionalidadesProyecto" name="funcionalidades" class="form-control" rows="2"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="pruebasProyecto" class="form-label">Pruebas realizadas</label>
+                  <textarea id="pruebasProyecto" name="pruebas" class="form-control" rows="2"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="correccionesProyecto" class="form-label">Correcciones aplicadas</label>
+                  <textarea id="correccionesProyecto" name="correcciones" class="form-control" rows="2"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="aprendizajeProyecto" class="form-label">Aprendizaje final</label>
+                  <textarea id="aprendizajeProyecto" name="aprendizaje" class="form-control" rows="2"></textarea>
+                </div>
+                <button class="btn btn-primary w-100" type="submit"><i class="bi bi-save2 me-2" aria-hidden="true"></i>Guardar guion en JSON Server</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer py-4">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <p class="mb-0">Semana 15 - Documentacion tecnica, validacion, correccion y exposicion.</p>
+        <a class="footer-link" href="#inicio">Volver arriba</a>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
