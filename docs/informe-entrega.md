@@ -2,30 +2,35 @@
 
 ## Datos generales
 
-- Nombre del proyecto:
-- Integrantes:
-- Fecha:
+- Nombre del proyecto: Feria Rural Digital - Versión documentada
+- Integrantes: Santiago Villada
+- Fecha: 2026-06-20
 
 ## Resumen del proyecto
 
-Describe brevemente que entrega este proyecto.
+Entrega que incluye una versión funcional y documentada del sistema de registro de visitantes, con persistencia en JSON Server, módulo de bitácora y checklist, y un dashboard con gráfico.
 
 ## Funcionalidad incremental agregada
 
-Explica que mejora o incremento aplicaste en esta version.
+- Organización y documentación de pruebas.
+- Registro en bitácora de mínimo tres pruebas (agregada entrada de Dashboard).
 
 ## Pruebas realizadas
 
-Resume las pruebas principales realizadas.
+- Validación de formulario (campos obligatorios y formato).
+- Guardado y verificación en JSON Server (`visitantes`, `bitacora`).
+- Visualización del dashboard y gráfico de estados.
 
 ## Correcciones aplicadas
 
-Describe los errores corregidos o ajustes realizados.
+- Ajustes de validación en cliente para evitar envíos con campos vacíos.
+- Confirmación y ajuste de endpoints en `config.js`.
 
-## Evidencias adjuntas
+## Evidencias adjuntas (sugeridas)
 
-Lista las capturas que entregas y su ubicacion.
+- las capturas se encuentran en la carpeta de evidencias
 
 ## Conclusiones
 
-Explica que aprendiste y que mejorarias.
+aprendi a Documentar y validar el proyecto facilita detectar casos límite en inputs y asegurar la persistencia.
+Para la siguiente versión: añadiria validación semántica de comentarios y roles de usuario para editar la bitácora.

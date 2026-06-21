@@ -17,6 +17,24 @@
       "interes": "Talleres",
       "comentario": "Interesado en talleres de emprendimiento rural.",
       "fechaRegistro": "2025-06-15T10:15:00.000Z"
+    },
+    {
+      "nombre": "martin bedoya",
+      "correo": "marti123@gmail.com",
+      "telefono": "3004478990",
+      "interes": "Talleres",
+      "comentario": "",
+      "fechaRegistro": "2026-06-21T03:14:36.951Z",
+      "id": 3
+    },
+    {
+      "nombre": "lautaro martinez",
+      "correo": "lau12@gmail.com",
+      "telefono": "3145677656",
+      "interes": "Productos agricolas",
+      "comentario": "",
+      "fechaRegistro": "2026-06-21T03:15:18.886Z",
+      "id": 4
     }
   ],
   "bitacora": [
@@ -43,67 +61,79 @@
       "estado": "corregido",
       "prioridad": "alta",
       "evidencia": "evidencias/json-server/api-visitantes.png"
+    },
+    {
+      "fecha": "2026-06-21",
+      "tipo": "Base de datos",
+      "esperado": "El proyecto debe iniciar correctamente y mostrar la página en http://localhost:5173.",
+      "obtenido": "El proyecto inició correctamente y la página se cargó sin problemas.",
+      "error": "el formulario aceptaba mas de 10 numeros ",
+      "correccion": "se corrigio eso y ya solo acepta 10 numeros",
+      "estado": "corregido",
+      "prioridad": "media",
+      "evidencia": "capturas en la carpeta de evidencias",
+      "id": 3
     }
   ],
   "checklist": [
     {
       "id": 1,
       "requisito": "El proyecto ejecuta correctamente con npm run start.",
-      "cumple": false,
+      "cumple": true,
       "evidencia": ""
     },
     {
       "id": 2,
       "requisito": "La base de datos JSON Server responde en http://localhost:3001.",
-      "cumple": false,
+      "cumple": true,
       "evidencia": ""
     },
     {
       "id": 3,
       "requisito": "El formulario valida campos obligatorios.",
-      "cumple": false,
+      "cumple": true,
       "evidencia": ""
     },
     {
       "id": 4,
       "requisito": "Los datos se guardan correctamente en db.json mediante la API.",
-      "cumple": false,
+      "cumple": true,
       "evidencia": ""
     },
     {
       "id": 5,
       "requisito": "La bitacora registra pruebas, errores y correcciones.",
-      "cumple": false,
+      "cumple": true,
       "evidencia": ""
     },
     {
       "id": 6,
       "requisito": "El README_ENTREGA.md contiene documentacion tecnica completa.",
-      "cumple": false,
+      "cumple": true,
       "evidencia": ""
     },
     {
       "id": 7,
       "requisito": "La consola del navegador no muestra errores criticos.",
-      "cumple": false,
+      "cumple": true,
       "evidencia": ""
     },
     {
       "id": 8,
       "requisito": "El diseno se adapta a vista movil.",
-      "cumple": false,
+      "cumple": true,
       "evidencia": ""
     },
     {
       "id": 9,
       "requisito": "El guion de exposicion esta preparado.",
-      "cumple": false,
+      "cumple": true,
       "evidencia": ""
     },
     {
       "id": 10,
       "requisito": "Las evidencias estan organizadas en las carpetas solicitadas.",
-      "cumple": false,
+      "cumple": true,
       "evidencia": ""
     }
   ],

@@ -1,37 +1,43 @@
-# Decisiones tecnicas del proyecto
+# Decisiones técnicas del proyecto
 
-En este archivo debes explicar por que tomaste ciertas decisiones durante el desarrollo o mejora del proyecto.
+## Decisión 1
 
-## Decision 1
+Decisión tomada: Usar Vite para el desarrollo local y bundling.
 
-**Decision tomada:**
+Motivo:Inicio rápido, recarga en caliente y compatibilidad con módulos ES.
 
-**Motivo:**
+Archivo o sección modificada:** `package.json` (scripts `dev` y `start`).
 
-**Archivo o seccion modificada:**
+Evidencia: [package.json](package.json)
 
-**Evidencia:**
+## Decisión 2
 
-## Decision 2
+Decisión tomada: Usar JSON Server como API local para persistencia.
 
-**Decision tomada:**
+Motivo: Permite simular una API REST sin desplegar backend y facilita pruebas y entrega.
 
-**Motivo:**
+Archivo o sección modificada: `db.json`, `src/js/config.js` (ENDPOINTS).
 
-**Archivo o seccion modificada:**
+Evidencia: [db.json](db.json) y [src/js/config.js](src/js/config.js)
 
-**Evidencia:**
+## Decisión 3
 
-## Decision 3
+Decisión tomada: Usar Bootstrap para diseño y Chart.js para visualización de datos.
 
-**Decision tomada:**
+Motivo: Bootstrap agiliza diseño responsive; Chart.js facilita creación de gráficos en el dashboard.
 
-**Motivo:**
+Archivo o sección modificada: `src/css/styles.css`, `src/js/dashboard.js`.
 
-**Archivo o seccion modificada:**
-
-**Evidencia:**
+Evidencia: [src/css/styles.css](src/css/styles.css) y [src/js/dashboard.js](src/js/dashboard.js)
 
 ## Mejora incremental aplicada
 
-Describe aqui la mejora real que agregaste en esta version del proyecto.
+Propuesta y base real: agregar validación avanzada al campo `comentario` (evitar contenido ofensivo o demasiado corto). Hay un TODO en `src/js/validaciones.js` que sugiere esta mejora. Implementarla permite elevar la calidad de los registros en `visitantes`.
+
+Pasos sugeridos para implementar la mejora:
+
+1. Añadir `validarComentario(texto)` en `src/js/validaciones.js`.
+2. Invocar la validación en `validarVisitante()` en `src/js/visitantes.js`.
+3. Registrar pruebas en la bitácora y añadir evidencias.
+
+Evidencia del punto de partida: [src/js/validaciones.js](src/js/validaciones.js)
